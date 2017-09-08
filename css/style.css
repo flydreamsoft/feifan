@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url("normalize.css");
+*{ margin: 0 ; padding: 0;}
+body{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+a img{ margin: 0; border: 0; padding: 0;}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.w{
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* 通用样式 */
+.top{ background-color: #535353; height: 40px; line-height: 40px;}
+
+.navlist{  height: 40px; }
+.navlist li{ float: left; width: 88px; height: 40px; margin: 0 6px; text-align: center; background: url(../img/icon-0.png) no-repeat right center; position: relative;}
+.navlist li:hover{ background: url(../img/icon-01.png) no-repeat right center white;}
+.navlist li a{ color: white;}
+.navlist li:hover a{ color: #333;}
+.wechat a img{ margin-top: 10px;}
+.navlist li dl{ width: 100px;  position: absolute; background-color: white; border: 1px solid #F3F3F3; top: 28px; display: none;}
+.navlist li dl dd {  width: 100px; margin: 0;}
+.navlist li:hover dl{ display: block; }
+.navlist li dl dd:hover{  background-color: #F3F3F3;}
+.navlist li dl dd:hover a{color: red;}
+
+.logocon_rh{ margin-top: 55px; font-size: 16px; width: 960px; text-align: right; width: 950px;}
+.logocon_rh .rhrh span{ margin-left: 50px;}
+.rhrh span:last-child{font-size: 20px; font-weight: bolder;}
+.banner{ width: inherit; height: 350px;}
+.banner img{ width: inherit; height: inherit;}
+.points .span{ width: 15px; height: 15px; background-color: white; border-radius: 50%;}
