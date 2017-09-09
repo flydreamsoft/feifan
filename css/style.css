@@ -52,7 +52,48 @@ ul{
 
 .logocon_rh{ margin-top: 55px; font-size: 16px; width: 960px; text-align: right; width: 950px;}
 .logocon_rh .rhrh span{ margin-left: 50px;}
-.rhrh span:last-child{font-size: 20px; font-weight: bolder;}
-.banner{ width: inherit; height: 350px;}
-.banner img{ width: inherit; height: inherit;}
-.points .span{ width: 15px; height: 15px; background-color: white; border-radius: 50%;}
+.rhrh span:first-child{ background: url(../img/icon1.png) no-repeat left center; padding-left: 40px;}
+.rhrh span:nth-child(2){  background: url(../img/icon2.png) no-repeat left center; padding-left: 40px;}
+.rhrh span:nth-child(3){  background: url(../img/icon3.jpg) no-repeat left center; padding-left: 40px;}
+.rhrh span:last-child{font-size: 20px; font-weight: bolder; background: url(../img/icon4.jpg) no-repeat left center; padding-left: 40px;}
+.banner{ width: inherit; height: 350px; position: relative; }
+.banner a{ width: inherit; height: inherit; position: absolute;}
+.banner a img{ width: inherit; height: inherit; }
+.banner .points{ position: absolute; bottom:20px; left: 50%; z-index: 100;}
+.points span{ width: 10px; height: 10px; background-color: white; border-radius: 50%; margin: 0 15px; float: left;}
+.points span.active{ background-color: red;}
+.cou{ margin-top: 40px;}
+.cou-left{ width: 220px;}
+.cou-leftlist{ width: inherit; position: relative;}
+.cou-leftlist dt{ width: 170px; height: 40px; background-color: #DD2727; line-height: 40px; padding-left: 50px;}
+.cou-leftlist dt a{ color: white; font-size: 16px;}
+.cou-leftlist dd{ width: 198px; height: 40px; line-height: 40px; border: 1px solid #DDDDDD; padding-left: 20px;}
+.cou-leftlist dd .cou-item1{ height: 40px;}
+.cou-leftlist dd .cou-item1 span{ font-size: 16px;}
+.cou-leftlist dd:hover .cou-item1{ background-color: #F3F3F3; color: red; line-height: 38px;}
+.cou-leftlist dd .cou-item1 a:hover { color: red;}
+.cou-leftlist dd .cou-item1 a{ color: #C2A5A5; margin-left: 25px;}
+.cou-leftlist dd .cou-item2{ width: 622px; height: 420px; border:1px solid #DDDDDD; background-color: #999999; border-width: 1px 1px 1px 0; background-color: #F3F3F3;  position: absolute; display: none; left: 220px; top: 40px; z-index: 999;}
+.cou-leftlist dd:hover .cou-item2{ display: block;}
+.cou-item2 a{display: inline-block; width: 270px; padding:0 0px 20px 20px; margin: 30px 0 0 20px; border-top: 1px solid #DDDDDD; line-height: 22px; font-size: 14px;}
+.cou-item2 a:hover{ color: red;}
+.cou-mid{ width: 732px; margin-left: 20px; height: 40px; border-bottom: solid 1px black;}
+.cou-mid ul li{ float: left; width: 106px; text-align: center;  line-height: 40px; font-weight: bolder;}
+.cou-mid ul li.active{ border-bottom: 2px solid red; color: red;}
+.cou-mid .contenxt{ width: 100%; height: 420px; position: relative; }
+.contenxt .tenxt:first-child{ display: block;}
+.contenxt .tenxt{ width: 100%; height: 380px;   position: absolute; left: 0; top:40px; display: none;}
+.contenxt .tenxt dl{ width: 340px; margin:0px 26px 19px 0; float: left; text-align: center; margin-bottom: 30px;}
+.contenxt .tenxt dl dt{ width: 50px;}
+.contenxt .tenxt dl dt a img{display: block; width: 50px; height: 50px; border-radius: 50%;}
+.contenxt .tenxt dl dt a span{display: block; margin-top: 9px; color: #999;}
+.contenxt .tenxt dl a{ display: block;} 
+.contenxt .tenxt dl dd{ width: 280px; text-align: left;}
+.contenxt .tenxt dl dd a:first-child{ font-size: 14px;}
+.contenxt .tenxt dl dd a:first-child:hover{ color: red;}
+.contenxt .tenxt dl dd a:last-child{ margin-top: 20px; color: #999;}
+.cou-rgh{ width: 220px;}
+.cou-rgh dt{ width: inherit; height: 40px; text-align: center; line-height: 40px; font-size: 16px;}
+.cou-rgh dd{ width: inherit; margin-bottom: 10px; position: relative; overflow: hidden;}
+.cou-rgh dd a span{display: block; width: 180px; height: 70px; background-color: rgba(0,0,0,0.8);  position: absolute; bottom:-40px; left:0; color: white;line-height: 30px; padding-left: 20px;}
+.cou-rgh dd:hover a span{ bottom: 0px;}
