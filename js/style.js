@@ -57,14 +57,24 @@ $(document).ready(function(){
 				$(".newcon .newlist").hide().eq(index).show();
 			});
 			
-			$(".newlist dl dd:first-child ").hover(function(){
+			
+			
+			$(".worktle ul li").hover(function(){
+				var index = $(this).index();
+				$(".worktle ul li").removeClass("active").eq(index).addClass("active");
+				$(".workcon .worklist").hide().eq(index).show();
+			});
+			
+			
+			
+			$(".newlist dl dd:first-child a ").hover(function(){
 				$(this).children("img").animate({
 					width:"150%",
 					height:"150%",
 					top:"-25%",
 					left:"-25%"
 					
-				},200);
+				},800);
 				
 			},function(){
 				$(this).children("img").animate({
@@ -72,9 +82,37 @@ $(document).ready(function(){
 					height:"100%",
 					top:"0%",
 					left:"0%"
-				},200);
+				},1000);
 			});
 			
+			
+			
+			
+			
+			
+			
+			
+			$(".worklist dl dt a ").hover(function(){
+				$(this).children("img").animate({
+					width:"150%",
+					height:"150%",
+					top:"-25%",
+					left:"-25%"
+					
+				},800);
+				
+			},function(){
+				$(this).children("img").animate({
+					width:"100%",
+					height:"100%",
+					top:"0%",
+					left:"0%"
+				},1000);
+			});
+			
+
+            
+				
 			
 	
 });
