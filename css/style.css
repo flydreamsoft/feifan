@@ -22,6 +22,7 @@ ul{
 	margin: 0px auto;
 }
 
+
 .left{
 	float: left;
 }
@@ -162,3 +163,32 @@ ul{
 .workcon dl dd:first-of-type{ margin-top: 10px; font-size: 14px;}
 .workcon dl dd:last-of-type{ margin-top: 20px; color: #999;}
 .workcon dl dd:last-of-type a span:last-child:hover{ color: green;}
+.job{ margin-top: 50px;}
+.job .jobtle span{ font-size: 20px;}
+.jobbox{ width: 1200px; height: 230px; margin-top: 30px;  position: relative; overflow: hidden; }
+.jobbox ul{ position: absolute; top:0; left: 0; background-color: #F3F3F3;}
+.jobbox ul li{ width: 1200px; height: 230px; }
+.jobbox ul li dl{ width: 310px; margin: 45px;}
+.jobbox ul li dl dt{ width: 75px; text-align: center;}
+
+.jobbox ul li dl dt a img{width:75px; height: 75px;  border-radius: 50%;}
+.jobbox ul li dl dt a span{display: block;  margin-top: 20px; font-size: 14px;}
+.jobbox ul li dl dd{ width: 215px; margin-left: 20px; line-height: 25px; font-size: 14px;}
+.jobbox ul li dl dd a{ display: block;}
+.prev,.next{ position: absolute; top: 90px; font-size: 6em; color: #E8E8E8; display: block; width: 50px; height: 80px; text-align: center; line-height: 60px; cursor: pointer;}
+.prev{ left: 0px;}
+.next{ right: 0px;}
+.prev:hover,.next:hover{background-color: rgba(0,0,0,0.6);  color: white;}
+.prize{ margin-top: 40px;}
+.prize span{ font-size: 20px;}
+.plist dl{ float: left; width: 235px; margin: 20px 30px; }
+.plist dl img{ width: inherit;}
+.plist dl dt,.plist dl dd{width: 235px; text-align: center;}
+.school{ margin-top: 40px;}
+.school >span{ font-size: 20px;}
+.schlist dl{ float: left; width: 250px; margin: 30px 20px;}
+.schlist dl dd{ float: right;  margin-left: 20px; border-left: 1px solid #999; margin-left: 10px; padding-left: 15px;}
+.schlist dl dd span{ display: block; line-height: 20px; }
+.schlist dl dd span:last-child{ color: #999;}
+.schlist dl dt{ float: left; font-size: 16px; }
+.aside-ad{width: 80px; height: 435px; position: absolute; top: 0px; left: 0px; z-index: 9999;}

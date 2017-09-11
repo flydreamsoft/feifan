@@ -114,5 +114,76 @@ $(document).ready(function(){
             
 				
 			
+			
+			
+			
+			/****轮播***/
+			var box = $(".jobbox");
+				var ul = $(".jobbox ul");
+				var count = $(".jobbox li").length;
+				var index = 0;
+				var width = $(".jobbox").width();
+				
+				
+				ul.width(width*count+1);
+				
+				// 第一张图克隆添加到最后
+				var first = $(".jobbox ul li:first-child").clone(true);
+				ul.append(first);
+				
+				var t = setInterval(running,2000);
+				// 悬停  关闭  定时器  移开重新打开定时器
+				box.hover(function(){
+					clearInterval(t);
+					$(".prev,.next").show();
+				},function(){
+					t = setInterval(running,2000);
+					$(".prev,.next").hide();
+				});
+				
+				$(".prev").click(function(){
+					index = (index-1+count)%count;
+					
+					ul.css("left",width*-1*index+"px");
+					
+				});
+				
+				$(".next").click(function(){
+					index = (index+1)%count;
+					
+					ul.css("left",width*-1*index+"px");
+				});
+				
+				//轮播函数
+				function running(){
+					// index 取值范围[0~7] 
+					index = (index+1)%count;
+					
+					if(index==0){
+						ul.animate({left:width*-1*count+"px"},500,function(){
+							ul.css("left","0px");
+						});
+					}else{
+						ul.animate({left:width*-1*index+"px"},500);
+					}
+				}
+				
+				
+				
+		
 	
 });
+
+
+		
+				/**侧边栏广告条**/ 
+			$(document).scroll(function() {
+				var H = $(window).height();
+				var sTop = $("body").scrollTop();
+				var ah = $(".aside-ad").height();
+				$(".aside-ad").stop(true, true).animate({
+					top: (((H - ah) / 2) + sTop) + "px"
+				}, 1000, "ease");
+				
+			});
+			
