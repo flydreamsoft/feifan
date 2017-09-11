@@ -21,7 +21,7 @@ ul{
 	width: 1200px;
 	margin: 0px auto;
 }
-
+.fz{ font-size: 20px;}
 
 .left{
 	float: left;
@@ -176,10 +176,7 @@ ul{
 .jobbox ul li dl dt a span{display: block;  margin-top: 20px; font-size: 14px;}
 .jobbox ul li dl dd{ width: 215px; margin-left: 20px; line-height: 25px; font-size: 14px;}
 .jobbox ul li dl dd a{ display: block;}
-.prev,.next{ position: absolute; top: 90px; font-size: 6em; color: #E8E8E8; display: block; width: 50px; height: 80px; text-align: center; line-height: 60px; cursor: pointer;}
-.prev{ left: 0px;}
-.next{ right: 0px;}
-.prev:hover,.next:hover{background-color: rgba(0,0,0,0.6);  color: white;}
+
 .prize{ margin-top: 40px;}
 .prize span{ font-size: 20px;}
 .plist dl{ float: left; width: 235px; margin: 20px 30px; }
@@ -192,4 +189,32 @@ ul{
 .schlist dl dd span{ display: block; line-height: 20px; }
 .schlist dl dd span:last-child{ color: #999;}
 .schlist dl dt{ float: left; font-size: 16px; }
-.aside-ad{width: 80px; height: 435px; position: absolute; top: 0px; left: 0px; z-index: 9999;}
+.cooper-com{ position: relative;}
+.cooper-com span.prev,.cooper-com span.next{ position: absolute; top: 62px; font-size: 50px; display: block; width: 40px; text-align: center; height: 80px; line-height: 75px; cursor: pointer; color: #D7D7D7;}
+.prev{ left: 0px;}
+.next{ right: 0px;}
+.prev:hover,.next:hover{background-color: rgba(0,0,0,0.6);  color: white;}
+.cooper{ margin: 0 auto; margin-top: 40px; height: 82px;  position: relative; width: 1094px;  overflow: hidden;}
+.cooper .cooperbox{ position: absolute; top:0; left: 0;  }
+.cooperbox span.cooper-img{ float: left; display: block; width: 170px; height: 80px; margin-right: 12px; border: 1px solid #DDDDDD;}
+.cooperbox span.cooper-img img{ width: inherit; height: inherit;}
+
+
+
+.footer{ margin-top: 40px; background-color: #F3F3F3;}
+.share{ width: 1200px; margin-top: 40px; padding: 40px 0; border-bottom: 1px solid #ECECEC;}
+.share dl{ width: 160px; margin-right: 48px;}
+.share dl:last-child{ margin: 0;}
+.share dl dd{padding-left: 10px; line-height: 20px;}
+.share dl dd span{ color: #999;}
+.datail{ margin-top: 30px; padding-left:20px;}
+.datail dl{ float: left; width: 60px; margin-right: 80px; line-height: 20px;}
+.datail dl dd a{ color: #999;}
+.datail dl dd a:hover{ color: red;}
+.datail dl:last-child{ width: 130px; margin-right: 60px;}
+.datail dl:last-child dd strong{ font-size: 16px; color: #333;}
+.link{ margin-top: 20px; padding-bottom: 40px; border-bottom: 1px solid #ECECEC;}
+.link dl{ line-height: 20px; color: #999; }
+.link dl dd{ width: 1000px;}
+.link dl dd a{ margin-right: 10px; color: #999;}
+.copy{ margin-top: 20px; text-align: center; line-height: 20px; color: #999; padding-bottom: 20px;}

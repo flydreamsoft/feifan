@@ -169,21 +169,63 @@ $(document).ready(function(){
 				}
 				
 				
-				
+			/**合作企业***/	
+	var cooperbox = $(".cooperbox");
+	var width = $(".cooperbox .cooper-img").width();
+	var count = $(".cooperbox .cooper-img").length;
+	box.width((width+14)*count);
+	var x = 0;
+	var s = setInterval(running,2000);
+	$(".cooper").hover(function(){
 		
+					clearInterval(s);
+					
+					
+				},function(){
+					s = setInterval(run,2000);
+					
+				});
 	
+//	$(".prev").click(function(){
+//					x = (x-1+count)%count;
+//					
+//					cooperbox.css("left",width*-1*index+"px");
+//					
+//				});
+//				
+//				$(".next").click(function(){
+//					x = (x+1)%count;
+//					
+//					cooperbox.css("left",width*-1*index+"px");
+//				});
+	
+	function run(){
+		
+		x = (x+1)%count;
+		if( x<10)
+		cooperbox.animate({left:(width+14)*x*-1+"px"},500);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+//	
+//	setInterval(function(){
+//		x = (x+1)%count;
+//		if( x<10)
+//		box.animate({left:(width+14)*x*-1+"px"},500);
+//		
+//	},1000);
+
+			
+					
+			
 });
 
 
 		
-				/**侧边栏广告条**/ 
-			$(document).scroll(function() {
-				var H = $(window).height();
-				var sTop = $("body").scrollTop();
-				var ah = $(".aside-ad").height();
-				$(".aside-ad").stop(true, true).animate({
-					top: (((H - ah) / 2) + sTop) + "px"
-				}, 1000, "ease");
-				
-			});
 			
