@@ -71,7 +71,8 @@ ul{
 .cou-leftlist dd{ width: 198px; height: 40px; line-height: 40px; border: 1px solid #DDDDDD; padding-left: 20px;}
 .cou-leftlist dd .cou-item1{ height: 40px;}
 .cou-leftlist dd .cou-item1 span{ font-size: 16px;}
-.cou-leftlist dd:hover .cou-item1{ background-color: #F3F3F3; color: red; line-height: 38px;}
+.cou-leftlist dd:hover{ background-color: #F3F3F3;}
+.cou-leftlist dd:hover .cou-item1{  color: red; line-height: 38px;}
 .cou-leftlist dd .cou-item1 a:hover { color: red;}
 .cou-leftlist dd .cou-item1 a{ color: #C2A5A5; margin-left: 25px;}
 .cou-leftlist dd .cou-item2{ width: 622px; height: 420px; border:1px solid #DDDDDD; background-color: #999999; border-width: 1px 1px 1px 0; background-color: #F3F3F3;  position: absolute; display: none; left: 220px; top: 40px; z-index: 999;}
