@@ -1,6 +1,15 @@
 $(document).ready(function(){
-	//轮播图
-	var banner = $(".banner");
+	/**二维码**/
+	var wechat = $(".chat .wechat");
+	wechat.hover(function(){
+		$(".qrcode").show();
+	},function(){
+		$(".qrcode").hide();
+	});
+	
+	
+	//banner轮播图
+	        var banner = $(".banner");
 			var images = $(".banner a");
 			var index = 0;
 			var count = images.length;
@@ -15,11 +24,11 @@ $(document).ready(function(){
 			$(".points").css("margin-left",(-1*20*count)+"px");
 			points.eq(0).addClass("active");
 			
-			var t = setInterval(bannerRunning,2000);
+			var b= setInterval(bannerRunning,2000);
 			banner.hover(function(){
-				clearInterval(t);
+				clearInterval(b);
 			},function(){
-				t = setInterval(bannerRunning,2000);
+				b = setInterval(bannerRunning,2000);
 			});
 			
 			points.hover(function(){
@@ -111,121 +120,145 @@ $(document).ready(function(){
 			});
 			
 
-            
+//          banner轮播图结束
 				
 			
 			
 			
 			
-			/****轮播***/
-			var box = $(".jobbox");
-				var ul = $(".jobbox ul");
-				var count = $(".jobbox li").length;
-				var index = 0;
-				var width = $(".jobbox").width();
+
+				
+	/**师资力量开始***/
+			
+			var teawidth = $(".teacherbox-img").width()
+			var teacount = $(".teacherbox-img").length
+			var y = 0;
+			var first = $(".teacherbox-img:first-child").clone(true);
+			var teacherbox = $(".teacherbox");
+			var teacherlist = $(".teacherlist");
+			var lef = $(".teacherword .lef");
+			var rgh = $(".teacherword .rgh");
+			teacherbox.width(teawidth*(teacount+1));
+			teacherbox.append(first);
+			var t = setInterval(teacher,3000);
+			teacherlist.hover(function(){
+				clearInterval(t);
+			},function(){
+				t = setInterval(teacher,3000);
+			});
+			
+			lef.hover(function(){
+				clearInterval(t);
+			},function(){
+				t = setInterval(teacher,3000);
+			});
+			
+			rgh.hover(function(){
+				clearInterval(t);
+			},function(){
+				t = setInterval(teacher,3000);
+			});
+			lef.click(function(){
+				y = (y-1+teacount)%teacount;
+				teacherbox.css("left",teawidth*y*-1+"px");
+			
+			});
+			
+			rgh.click(function(){
+				y = (y+1)%teacount;
+				teacherbox.css("left",teawidth*y*-1+"px");
 				
 				
-				ul.width(width*count+1);
-				
-				// 第一张图克隆添加到最后
-				var first = $(".jobbox ul li:first-child").clone(true);
-				ul.append(first);
-				
-				var t = setInterval(running,2000);
-				// 悬停  关闭  定时器  移开重新打开定时器
-				box.hover(function(){
-					clearInterval(t);
-					$(".prev,.next").show();
-				},function(){
-					t = setInterval(running,2000);
-					$(".prev,.next").hide();
-				});
-				
-				$(".prev").click(function(){
-					index = (index-1+count)%count;
-					
-					ul.css("left",width*-1*index+"px");
-					
-				});
-				
-				$(".next").click(function(){
-					index = (index+1)%count;
-					
-					ul.css("left",width*-1*index+"px");
-				});
-				
-				//轮播函数
-				function running(){
-					// index 取值范围[0~7] 
-					index = (index+1)%count;
-					
-					if(index==0){
-						ul.animate({left:width*-1*count+"px"},500,function(){
-							ul.css("left","0px");
-						});
-					}else{
-						ul.animate({left:width*-1*index+"px"},500);
-					}
+			});
+			
+			function teacher(){
+				y = (y+1)%teacount;
+				if(y==0){
+					teacherbox.animate({left:teawidth*teacount*-1+"px"},1000,function(){
+						teacherbox.css("left","0px");
+					});
 				}
-				
-				
-			/**合作企业***/	
-	var cooperbox = $(".cooperbox");
-	var width = $(".cooperbox .cooper-img").width();
-	var count = $(".cooperbox .cooper-img").length;
-	box.width((width+14)*count);
-	var x = 0;
-	var s = setInterval(running,2000);
-	$(".cooper").hover(function(){
+				teacherbox.animate({left:teawidth*y*-1+"px"},1000);
+			}
 		
-					clearInterval(s);
-					
-					
+//			
+//			/**师资力量结束***/					
+//			/**合作企业开始***/	
+	var cooperbox = $(".cooperbox");
+	var coowidth = $(".cooperbox .cooper-img").width();
+	var coocount = $(".cooperbox .cooper-img").length;
+	cooperbox.width((coowidth+14)*coocount);
+	var x = 0;
+	var h = setInterval(run,2000);
+	$(".cooper").hover(function(){
+					clearInterval(h);
 				},function(){
-					s = setInterval(run,2000);
+					h = setInterval(run,2000);
 					
 				});
-	
-//	$(".prev").click(function(){
-//					x = (x-1+count)%count;
-//					
-//					cooperbox.css("left",width*-1*index+"px");
-//					
-//				});
-//				
-//				$(".next").click(function(){
-//					x = (x+1)%count;
-//					
-//					cooperbox.css("left",width*-1*index+"px");
-//				});
+	$(".prev").hover(function(){
+					clearInterval(h);
+				},function(){
+					h = setInterval(run,2000);
+					
+				});
+	$(".next").hover(function(){
+					clearInterval(h);
+				},function(){
+					h = setInterval(run,2000);
+					
+				});			
+				
+						
+	$(".prev").click(function(){
+				x = (x+1)%coocount;
+				cooperbox.css("left",(coowidth+14)*x*-1+"px");
+					
+				});
+				
+	$(".next").click(function(){
+					x = (x-1)%coocount;
+					cooperbox.css("left",(coowidth+14)*x*1+"px");
+					
+					
+				});
 	
 	function run(){
 		
-		x = (x+1)%count;
-		if( x<10)
-		cooperbox.animate({left:(width+14)*x*-1+"px"},500);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-//	
-//	setInterval(function(){
-//		x = (x+1)%count;
+		x = (x+1)%coocount;
 //		if( x<10)
-//		box.animate({left:(width+14)*x*-1+"px"},500);
-//		
-//	},1000);
+		cooperbox.animate({left:(coowidth+14)*x*-1+"px"},500);
+	}
+//	
+//	         /**合作企业结束***/	
+//	         /**明星就业开始***/	
+var jobbox = $(".jobbox");
+var jobwidth = $(".jobbox").width();
+var jobcount = $(".jobbox-img").length;
+var z = 0;
+jobbox.width(jobwidth*jobcount);
+var l = setInterval(jobRunning,3000);
+jobbox.hover(function(){
+	clearInterval(l)
+},function(){
+	l = setInterval(jobRunning,3000);
+});
+function jobRunning(){
+	z = (z+1)%jobcount;
+	jobbox.animate({left:jobwidth*z*-1+"px"},500)
+}
 
-			
-					
-			
+             /**明星就业结束***/	
+						
 });
 
-
+$(document).scroll(function() {
+				var H = $(window).height();
+				var sTop = $("body").scrollTop();
+				var ah = $(".aside-ad").height();
+				$(".aside-ad").stop(true, true).animate({
+					top: (((H - ah) / 2) + sTop) + "px"
+				}, 1000, "easeOutBack");
+			});
 		
 			

@@ -44,7 +44,9 @@ ul{
 .navlist li:hover{ background: url(../img/icon-01.png) no-repeat right center white;}
 .navlist li a{ color: white;}
 .navlist li:hover a{ color: #333;}
-.wechat a img{ margin-top: 10px;}
+.chat{ position: relative;}
+.chat a img.wechat{ margin-top: 10px;}
+.chat img.qrcode{ position: absolute; top:40px; left: -60px; display: none;}
 .navlist li dl{ width: 100px;  position: absolute; top: 40px; left: 0px; background-color: white; border: 1px solid #F3F3F3;  display: none;}
 .navlist li dl dd {  width: 100px; margin: 0;}
 .navlist li:hover dl{ display: block; }
@@ -135,18 +137,23 @@ ul{
 .wordlist dl dd span:nth-of-type(4) a{ color: #51B8F1;}
 .mlight{ font-size: 14px;}
 .mlight >span{ display: block; width: 100px;  border-bottom: 1px solid red; text-align: center; padding-bottom: 10px;}
-.mlight marquee span{ color: red;}
-.teacher{ margin-top: 30px; width: 1200px; }
-.title strong{ font-size: 20px;}
-.title span{ display: block; width: 5px; height: 9px; padding-right: 20px;}
-.title .btnleft{ background: url(../img/icon-12.png) no-repeat left center;}
-.title .btnrgh{ background: url(../img/icon-11.png) no-repeat left center;}
-.teacherlist{ margin-top: 40px; overflow: hidden; }
-.tealist{ width: 1200px; height: 240px;}
-.teacherlist dl{ float: right; margin-left: 30px; }
-.teacherlist dl dt a img{ width: 270px; height: 180px;}
-.teacherlist dl dd{ line-height: 30px;}
-.teacherlist dl dd span{ color: #999999;}
+.mlight marquee span{ margin-left: 20px;}
+.mlight marquee span strong{ color: red; font-weight: normal; margin-left: 8px;}
+.mlight marquee span i{ margin-left: 5px;}
+
+.teacher{ margin-top: 40px;}
+.teacher .teacherword > span{ font-size: 20px;}
+.teacherword strong{padding-right: 15px; }
+
+.teacherlist{ margin-top: 40px; width: 1200px;  height: 240px; position: relative; overflow: hidden;}
+.teacherbox{ position: absolute; top:0; left: 0; margin-left: 30px;}
+.teacherbox-img{ float: left; width: 1200px; height: 240px;}
+.teacherbox-img dl{ width: inherit; height: inherit; float: left; margin-right: 30px; width: 270px;}
+.teacherbox-img dl:last-child{ margin: 0;}
+.teacherbox-img dl dt img{ width: inherit; height: 180px;}
+.teacherbox-img dl dd{ line-height: 30px;}
+
+
 .works{ margin-top: 40px;}
 .worktle{ border-bottom: 1px solid #DDDDDD; height: 30px;}
 .works .worktle span{ font-size: 20px;}
@@ -166,17 +173,15 @@ ul{
 .workcon dl dd:last-of-type a span:last-child:hover{ color: green;}
 .job{ margin-top: 50px;}
 .job .jobtle span{ font-size: 20px;}
-.jobbox{ width: 1200px; height: 230px; margin-top: 30px;  position: relative; overflow: hidden; }
-.jobbox ul{ position: absolute; top:0; left: 0; background-color: #F3F3F3;}
-.jobbox ul li{ width: 1200px; height: 230px; }
-.jobbox ul li dl{ width: 310px; margin: 45px;}
-.jobbox ul li dl dt{ width: 75px; text-align: center;}
-
-.jobbox ul li dl dt a img{width:75px; height: 75px;  border-radius: 50%;}
-.jobbox ul li dl dt a span{display: block;  margin-top: 20px; font-size: 14px;}
-.jobbox ul li dl dd{ width: 215px; margin-left: 20px; line-height: 25px; font-size: 14px;}
-.jobbox ul li dl dd a{ display: block;}
-
+.joblist{ width: 1200px; height: 160px; margin-top: 30px; position: relative; overflow: hidden;}
+.jobbox{ position: absolute; top:0px; left: 0; }
+.jobbox .jobbox-img{ width: 1200px; height: inherit; background-color: #F3F3F3;}
+.jobbox .jobbox-img dl{ width: 310px; margin-right: 30px; font-size: 14px; margin: 0 45px;}
+.jobbox .jobbox-img dl a{ display: block;}
+.jobbox .jobbox-img dl dt{ width: 70px;  text-align: center; line-height: 20px; margin-top: 20px;}
+.jobbox .jobbox-img dl dd{ width: 200px; line-height: 20px; }
+.jobbox .jobbox-img dl dd span{ line-height: 30px;}
+.jobbox .jobbox-img dl dt a img{ width: 70px; height: 70px; border-radius: 50%; }
 .prize{ margin-top: 40px;}
 .prize span{ font-size: 20px;}
 .plist dl{ float: left; width: 235px; margin: 20px 30px; }
@@ -194,8 +199,8 @@ ul{
 .prev{ left: 0px;}
 .next{ right: 0px;}
 .prev:hover,.next:hover{background-color: rgba(0,0,0,0.6);  color: white;}
-.cooper{ margin: 0 auto; margin-top: 40px; height: 82px;  position: relative; width: 1094px;  overflow: hidden;}
-.cooper .cooperbox{ position: absolute; top:0; left: 0;  }
+.cooper{ margin: 0 auto; margin-top: 40px; height: 82px; width: 1094px;  position: relative;   overflow: hidden;}
+.cooper .cooperbox{ position: absolute; top:0; left:0;  }
 .cooperbox span.cooper-img{ float: left; display: block; width: 170px; height: 80px; margin-right: 12px; border: 1px solid #DDDDDD;}
 .cooperbox span.cooper-img img{ width: inherit; height: inherit;}
 
@@ -218,3 +223,12 @@ ul{
 .link dl dd{ width: 1000px;}
 .link dl dd a{ margin-right: 10px; color: #999;}
 .copy{ margin-top: 20px; text-align: center; line-height: 20px; color: #999; padding-bottom: 20px;}
+.aside-ad{
+	width: 80px;
+	height: 435px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	
+}
